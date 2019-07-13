@@ -18,6 +18,7 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { PromotionService } from './services/promotion.service';
+import { LeaderService } from './services/leader.service';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { PromotionService } from './services/promotion.service';
     AppRoutingModule
   ],
   providers: [
-    PromotionService
+    PromotionService,
+    LeaderService
   ],
   bootstrap: [AppComponent]
 })
