@@ -8,8 +8,8 @@ import { Params, ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { from } from 'rxjs';
 import { FormBuilder, FormGroup, FormControl, Validators, FormsModule, ReactiveFormsModule  } from '@angular/forms';
+import { flyInOut, expand } from '../animations/app.animation'
 import { trigger, state, style, animate, transition } from '@angular/animations';
-
 
 @Component({
   selector: 'app-dishdetail',
@@ -26,7 +26,9 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
           opacity: 0
       })),
       transition('* => *', animate('0.5s ease-in-out'))
-  ])
+  ]), 
+  flyInOut(),
+  expand()
 ]
 })
 
